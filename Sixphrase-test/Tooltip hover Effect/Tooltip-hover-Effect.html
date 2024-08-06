@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-top: 10%;
+        }
+        .button {
+            width: 60px;
+            height: 60px;
+            align-items: center;
+            border-radius: 30px;
+            border: none;
+            position: relative;
+            background-color: blue transparent black;
+            cursor: pointer;
+        }
+
+        .b {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 500px;
+            height: 500px;
+            background-color: rgb(222, 116, 165);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            column-gap: 20px;
+        }
+
+        .img {
+            height: 27px;
+            width: 27px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 6%;
+            display: inline-flex;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            width: 100px;
+            background-color: rgb(85, 20, 237);
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -53px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .button:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        .button:hover{
+            background-color: rgb(85, 20, 237);
+        }
+
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgb(85, 20, 237) transparent transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="b">
+            <div class="grid">
+                <button class="button">
+                    <img class="img" src="facebook.png" alt="">
+                    <span class="tooltip">Facebook</span>
+                </button>
+                <button class="button">
+                    <img class="img" src="twitter.png" alt="">
+                    <span class="tooltip">Twitter</span>
+                </button>
+                <button class="button">
+                    <img class="img" src="instagram.png" alt="">
+                    <span class="tooltip">Instagram</span>
+                </button>
+                <button class="button">
+                    <img class="img" src="github.png" alt="">
+                    <span class="tooltip">GitHub</span>
+                </button>
+                <button class="button">
+                    <img class="img" src="youtube.png" alt="">
+                    <span class="tooltip">YouTube</span>
+                </button>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
